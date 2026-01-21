@@ -11,17 +11,26 @@
 <span>divded by</span><br><br>
 <input type="number" id="num2">
 <br><br>
-<button onclick="calculateDivsion()">Calculate</button>
+<button onclick="calculateDivision()">Calculate</button>
 <p id="result"> </p>
 </div>
    </center>
    <script>
-  function calculateDivsion(){
+  function calculateDivision() {
     let input1 = document.getElementById("num1").value;
     let input2 = document.getElementById("num2").value;
-    let number = (input1/input2);
-    document.getElementById("result").innerHTML = number + "";
+    let number = (input1 % input2);
+
+    if (input1 % input2 === 0) {
+      document.getElementById("result").innerHTML =
+        input1 + " is divisible by " + input2;
+    } else {
+      document.getElementById("result").innerHTML =
+        input1 + " is not divisible by " + input2;
+    }
   }
+  
    </script>
   </body>
 </html>
+
